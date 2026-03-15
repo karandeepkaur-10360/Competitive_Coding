@@ -17,20 +17,8 @@ public:
             if(candidates[i] > target) 
                 break;
 
-            temp.push_back(candidates[i]);
 
-            solve(i + 1, candidates, target - candidates[i], temp, ans);
-
-            temp.pop_back();
-        }
-    }
-
-    vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
-        
-        sort(candidates.begin(), candidates.end());
-
-        vector<vector<int>> ans;
-        vector<int> temp;
+    
 
         solve(0, candidates, target, temp, ans);
 
